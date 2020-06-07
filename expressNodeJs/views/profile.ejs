@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+		body{background: black;
+			font-family: verdana;
+			color: #fff;
+		    padding: 30px;}
+		h1{font-size: 48px;
+		  text-transform: uppercase;
+		  letter-spacing: 2px;
+		  text-align: center;}
+	    h2{font-size: 30px;
+		  text-transform: uppercase;
+		  letter-spacing: 2px;
+		  text-align: center;}
+		
+		p, li{font-size: 16px;
+		  text-align: center;}
+	</style>
+	<title></title>
+</head>
+<body>
+	<%- include('partials/nav.ejs') %>
+	<h1>Wellcome <%=person%></h1>
+	<p><strong>Age: <%=data.age%></strong></p>
+	<p><strong>Job: <%=data.job%></strong></p>
+	<h2>Hobbies</h2>
+	<ul>
+		<% data.hobbie.forEach(function(eachHobbie){ %>
+		<li><%= eachHobbie%></li>
+	<%});%>
+	</ul>	
+</body>
+</html>
